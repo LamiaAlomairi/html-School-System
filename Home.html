@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Al-Nasaem School</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <script src="code.js"></script>
+        <!--  ----------      Header Of Bage       ---------  -->
+        <header>
+            <div class="head_div">
+                <table class="home_table">
+                    <tr>
+                        <td class="icon_place">
+                            <img src="images/icon.jpg" class="icon">
+                        </td>
+                        <td>
+                            <h2><i>Al-Nasaem School for Basic Education</i></h2>
+                        </td>
+                        <td class="button_place">
+                          <!--  <button type="button" class="register_button">Sing Up</button>   -->
+                            <button type="button" class="login_button">Login</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            
+                                <button type="button" class="home_button" >Home</button>
+                                <button type="button" class="aboutUs_button">About Us</button>
+                                <button type="button" class="addStudent_button">Add Student</button>
+                                <button type="button" class="studentList_button">API</button>
+                            
+                            
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+        </header>
+        <!--  ----------      Body Of Bage       ---------  -->
+        <iframe src="welcome.html" class="frame"></iframe>
+
+        <!--  ----------      Footer Of Bage       ---------  -->
+        <footer>
+            <div class="botoom_div">
+                <table class="bottom_table">
+                    <tr>
+                        <td colspan="4">
+                            <h3><i>Contact Us:</i></h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2"></td>
+                        <td width="200px">
+                            <img src="images/WhatsApp.png" class="bottom_icon">
+                        </td>
+                        <td width="200px">
+                            <img src="images/insta.png" class="bottom_icon">
+                        </td>
+                        <td rowspan="2">
+    
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            9999 9999
+                        </td>
+                        <td>
+                            alnasaem.school@gmail.com 
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </footer>
+        <!--  ----------      Java Script       ---------  -->
+        <script>
+            let home_button = document.querySelector(".home_button");
+            let aboutUs_button = document.querySelector(".aboutUs_button");
+            let frame = document.querySelector(".frame");
+            let addStudent_button = document.querySelector(".addStudent_button");
+            let studentList_button = document.querySelector(".studentList_button");
+            //let register_button = document.querySelector(".register_button");
+            let login_button = document.querySelector(".login_button");
+            
+            home_button.addEventListener("click", () => {
+                frame.src="welcome.html";
+            });
+            
+
+            aboutUs_button.addEventListener("click", () => {
+                frame.src="aboutUs.html";
+            });
+
+            addStudent_button.addEventListener("click", () => {
+                frame.src="addStudent.html";
+            });
+
+            studentList_button.addEventListener("click", () => {
+                frame.src="studentList.html";
+            });
+            /*register_button.addEventListener("click", () => {
+                frame.src="login_singup.html";
+            });
+            */
+            login_button.addEventListener("click", () => {
+                frame.src="login_singup.html";
+            });
+            
+        </script>
+    </body>
+</html>

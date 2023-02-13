@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #api_div{
+                text-align: center;
+                padding: 30px;
+                margin: 0px auto;
+            }
+
+            #api_table{
+                margin-left: auto;
+                margin-right: auto;
+                width: 900px;
+            }
+
+            #api_table th, td {
+                border: 1px solid black;
+                border-radius: 10px;
+                height: 25px;
+                padding: 10px;
+            }
+            
+        </style>
+    </head>
+    <body>
+
+        <div id="api_div">
+            <table  id="api_table">
+                <tr>
+                    <th>Full Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Location</th>
+                    <th>Country</th>
+                </tr> 
+            </table>
+        </div>
+
+        
+        <script>
+            const api_url = "https://randomuser.me/api/";
+            async function getUser() {
+                for (let i = 0; i < 10; i++) {
+                    //making a call to API
+                    const response = await fetch(api_url);
+        
+                    // converting it to JSON format
+                    const data = await response.json();
+                    
+                    // getting data/information from JSON
+                    const user = data.results[0];
+                    let { first, last } = user.name;
+                    let { gender, email, phone } = user;
+                    let age = user.dob.age;
+                    let { city, state, country } = user.location;
+                    let fullName = first + " " + last;
+                    
+                    // dynamically add a row to the table
+                    let table = document.querySelector("#api_table");
+                    let row = table.insertRow();
+                    let fullnameCell = row.insertCell(0);
+                    let ageCell = row.insertCell(1);
+                    let genderCell = row.insertCell(2);
+                    let locationCell = row.insertCell(3);
+                    let countryCell = row.insertCell(4);
+                    
+                    // set the values of the cells
+                    fullnameCell.innerHTML = fullName;
+                    ageCell.innerHTML = age;
+                    genderCell.innerHTML = gender;
+                    locationCell.innerHTML = city + ", " + state;
+                    countryCell.innerHTML = country;
+                }
+            }
+            // Calling the getUser() function
+            getUser();
+    
+    </script>
+    </body>
+</html>

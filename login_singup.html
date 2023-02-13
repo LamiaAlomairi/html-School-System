@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <title>Signup & Login page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+  
+<body style="justify-content: center; align-items: center; ">
+    <!-- container div -->
+    <div class="container">
+  
+        <!-- upper button section to select
+             the login or signup form -->
+        <div class="slider"></div>
+        <div class="btn">
+            <button class="login">Login</button>
+            <button class="signup">Signup</button>
+        </div>
+  
+        <!-- Form section that contains the
+             login and the signup form -->
+        <div class="form-section">
+  
+            <!-- login form -->
+            <div class="login-box">
+                <input type="text" id="username" class="email ele" placeholder="User Name">
+                <input type="password" id="password" class="password ele" placeholder="password">
+                <button class="clkbtn"  onclick="redirect()">Login</button>
+            </div>
+  
+            <!-- signup form -->
+            <div class="signup-box">
+                <input type="text" id="name" class="name ele" name="name"  placeholder="Enter your name">
+                <input type="email" id="email" class="email ele" name="email" placeholder="youremail@email.com">
+                <input type="password" class="password ele" placeholder="password">
+                <input type="password" class="password ele" placeholder="Confirm password">
+                <button class="clkbtn" name="singup" onclick="addData()">Signup</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let signup = document.querySelector(".signup");
+        let login = document.querySelector(".login");
+        let slider = document.querySelector(".slider");
+        let formSection = document.querySelector(".form-section");
+  
+        signup.addEventListener("click", () => {
+            slider.classList.add("moveslider");
+            formSection.classList.add("form-section-move");
+        });
+  
+        login.addEventListener("click", () => {
+            slider.classList.remove("moveslider");
+            formSection.classList.remove("form-section-move");
+        });
+
+        function redirect() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if (username == "admin" && password == "admin") {
+               window.location = "addStudent.html";
+            } else {
+               alert("Incorrect username or password");
+            }
+         }
+
+/*
+        let form = document.querySelector(".signup-box");
+        form.addEventListener(".clkbtn", function(event) {
+  event.preventDefault();
+
+  // Retrieve the values of the name and email inputs
+  let nameInput = document.querySelector(".name ele");
+    let emailInput = document.querySelector(".email ele");
+  let name = nameInput.value;
+  let email = emailInput.value;
+
+  // The registration data
+  const registrationData = {
+    name: name,
+    email: email
+  };
+
+  // Send an HTTP request to the server to store the data in a JSON file
+  const xhr = new XMLHttpRequest();
+  xhr.open("POST", "/api/register", true);
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+      console.log("Data stored successfully!");
+    }
+  };
+  xhr.send(JSON.stringify(registrationData));
+});
+
+
+function addData() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var data = [name, email];
+      console.log(data);
+    }
+
+
+
+
+  */     
+
+
+    </script>
+</body>
+  
+</html>
