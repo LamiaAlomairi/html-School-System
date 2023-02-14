@@ -1,7 +1,7 @@
 body{
     background-image: linear-gradient(to right,
     rgb(250, 249, 249),
-    rgb(77, 172, 172));
+    rgb(91, 154, 226));
 }
 
 /**********************************     Home page style   *************************************************/
@@ -59,12 +59,12 @@ body{
     border-radius: 30px;
     border: none;
     background-image: linear-gradient(to right,
-    rgb(77, 172, 172),
+    rgb(91, 154, 226),
     rgb(250, 249, 249));
 }
 .login_button:hover {
     background-image: linear-gradient(to left,
-    rgb(77, 172, 172),
+    rgb(91, 154, 226),
     rgb(250, 249, 249));
     color: rgb(92, 90, 87);
 }
@@ -75,14 +75,18 @@ body{
     border-radius: 30px;
     border: none;
     background-image: linear-gradient(to right,
-    rgb(77, 172, 172),
+    rgb(91, 154, 226),
     rgb(250, 249, 249));
 }
 .home_button:hover {
     background-image: linear-gradient(to left,
-    rgb(77, 172, 172),
+    rgb(91, 154, 226),
     rgb(250, 249, 249));
     color: rgb(92, 90, 87);
+}
+.home_button:active{
+    color : white;
+    background : rgb(77, 172, 172);
 }
 
 
@@ -92,15 +96,16 @@ body{
     border-radius: 30px;
     border: none;
     background-image: linear-gradient(to right,
-    rgb(77, 172, 172),
+    rgb(91, 154, 226),
     rgb(250, 249, 249));
 }
 .aboutUs_button:hover {
     background-image: linear-gradient(to left,
-    rgb(77, 172, 172),
+    rgb(91, 154, 226),
     rgb(250, 249, 249));
     color: rgb(92, 90, 87);
 }
+
 
 .addStudent_button{
     width: 150px;
@@ -108,12 +113,12 @@ body{
     border-radius: 30px;
     border: none;
     background-image: linear-gradient(to right,
-    rgb(77, 172, 172),
+    rgb(91, 154, 226),
     rgb(250, 249, 249));
 }
 .addStudent_button:hover {
     background-image: linear-gradient(to left,
-    rgb(77, 172, 172),
+    rgb(91, 154, 226),
     rgb(250, 249, 249));
     color: rgb(92, 90, 87);
 }
@@ -124,17 +129,31 @@ body{
     border-radius: 30px;
     border: none;
     background-image: linear-gradient(to right,
-    rgb(77, 172, 172),
+    rgb(91, 154, 226),
     rgb(250, 249, 249));
 }
 .studentList_button:hover {
     background-image: linear-gradient(to left,
-    rgb(77, 172, 172),
+    rgb(91, 154, 226),
     rgb(250, 249, 249));
     color: rgb(92, 90, 87);
 }
 
-
+.university_button{
+    width: 150px;
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+    background-image: linear-gradient(to right,
+    rgb(91, 154, 226),
+    rgb(250, 249, 249));
+}
+.university_button:hover {
+    background-image: linear-gradient(to left,
+    rgb(91, 154, 226),
+    rgb(250, 249, 249));
+    color: rgb(92, 90, 87);
+}
 
 /**************    Frame Style    *****************************/
 .frame{
@@ -153,7 +172,7 @@ body{
     position: relative;
     background-image: linear-gradient(to left,
     rgb(250, 249, 249),
-    rgb(77, 172, 172));
+    rgb(91, 154, 226));
 }
 
 .bottom_table{

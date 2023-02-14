@@ -31,7 +31,7 @@
                                 <button type="button" class="aboutUs_button">About Us</button>
                                 <button type="button" class="addStudent_button">Add Student</button>
                                 <button type="button" class="studentList_button">API</button>
-                            
+                                <button type="button" class="university_button">University</button>
                             
                         </td>
                     </tr>
@@ -80,18 +80,21 @@
             let aboutUs_button = document.querySelector(".aboutUs_button");
             let frame = document.querySelector(".frame");
             let addStudent_button = document.querySelector(".addStudent_button");
+            let university_button = document.querySelector(".university_button");
             let studentList_button = document.querySelector(".studentList_button");
             //let register_button = document.querySelector(".register_button");
             let login_button = document.querySelector(".login_button");
             
             home_button.addEventListener("click", () => {
                 frame.src="welcome.html";
+                
             });
             
 
             aboutUs_button.addEventListener("click", () => {
                 frame.src="aboutUs.html";
             });
+
 
             addStudent_button.addEventListener("click", () => {
                 frame.src="addStudent.html";
@@ -100,6 +103,12 @@
             studentList_button.addEventListener("click", () => {
                 frame.src="studentList.html";
             });
+
+            university_button.addEventListener("click", () => {
+                //src="university.html";
+                location.href = "university.html";
+            });
+
             /*register_button.addEventListener("click", () => {
                 frame.src="login_singup.html";
             });
